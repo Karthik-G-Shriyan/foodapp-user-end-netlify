@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:8080/api/cart";
+const BASE_URL = "https://online-food-application-backend-railway-app-production.up.railway.app/api/cart";
 
 export const loadCartData = async (token) => {
   try {

@@ -57,7 +57,7 @@ const PlaceOrder = () => {
 
         try {
             const response = await axios.post(
-                'http://localhost:8080/api/orders/create',
+                'https://online-food-application-backend-railway-app-production.up.railway.app/api/orders/create',
                 orderData,
                 {
                     headers: { Authorization: `Bearer ${token}` }
@@ -113,7 +113,7 @@ const PlaceOrder = () => {
         }
 
         try {
-            const response = await axios.post('http://localhost:8080/api/orders/verify', paymentData,
+            const response = await axios.post('https://online-food-application-backend-railway-app-production.up.railway.app/api/orders/verify', paymentData,
                 { headers: { 'Authorization': `Bearer ${token}` } }
             );
 
@@ -135,7 +135,7 @@ const PlaceOrder = () => {
 
     const deleteOrder = async (orderId) => {
         try {
-            await axios.delete('http://localhost:8080/api/orders/' + orderId,
+            await axios.delete('https://online-food-application-backend-railway-app-production.up.railway.app/api/orders/' + orderId,
                 { headers: { 'Authorization': `Bearer ${token}` } });
         } catch (error) {
             console.log(error);
@@ -144,7 +144,7 @@ const PlaceOrder = () => {
 
     const clearCart = async () => {
         try {
-            await axios.delete("http://localhost:8080/api/cart",
+            await axios.delete("https://online-food-application-backend-railway-app-production.up.railway.app/api/cart",
                 { headers: { 'Authorization': `Bearer ${token}` } });
             setQuantities({});
         } catch (error) {

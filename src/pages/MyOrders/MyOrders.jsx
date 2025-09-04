@@ -15,7 +15,7 @@ const MyOrders = () => {
     const fetchOrders = async () => {
         try {
             setLoading(true);
-            const response = await axios.get("http://localhost:8080/api/orders",
+            const response = await axios.get("https://online-food-application-backend-railway-app-production.up.railway.app/api/orders",
                 { headers: { "Authorization": `Bearer ${token}` } }
             );
             setData(response.data);
