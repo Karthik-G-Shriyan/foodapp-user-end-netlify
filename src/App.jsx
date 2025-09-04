@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import Menubar from './components/menubar/menubar';
+import Menubar from './components/Menubar/Menubar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ExploreFoods from './pages/Explore/ExploreFoods';
 import ContactUs from './pages/ContactUs/ContactUs';
