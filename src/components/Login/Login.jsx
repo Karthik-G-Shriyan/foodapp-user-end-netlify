@@ -30,12 +30,12 @@ const Login = () => {
       const response = await login(data);
       if (response.status === 200) {
         setToken(response.data.token);
-        localStorage.setItem('token', response.data.token);
+        sessionStorage.setItem('token', response.data.token);
         await loadCartItems(response.data.token);
         toast.success('Login successful! Welcome back!');
         navigate("/");
       } else {
-        toast.error('Unable to login. Please try again');
+        toast.error('invalid username or password. please try again..!');
       }
     } catch (error) {
       console.log('Error while logging in', error);

@@ -75,9 +75,9 @@ export const StoreContextProvider = (props) => {
         setFoodList([]); // fallback to empty list
       }
 
-      if (localStorage.getItem("token")) {
-        setToken(localStorage.getItem("token"));
-        await loadCartItems(localStorage.getItem("token"));
+      if (sessionStorage.getItem("token")) {
+        setToken(sessionStorage.getItem("token"));
+        await loadCartItems(sessionStorage.getItem("token"));
       }
     }
     loadData();
